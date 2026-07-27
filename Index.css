@@ -1,0 +1,248 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: #2F2F2F;
+}
+
+/* ================= HERO ================= */
+
+.hero-new {
+  height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)),
+    url("home.png");
+  background-size: cover;
+background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-overlay p {
+  color: #EAF7EE;
+  margin-top: 10px;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+
+/* ================= WAVE ================= */
+
+.wave svg {
+  width: 100%;
+  height: 100px;
+  display: block;
+  margin-bottom: -5px;
+}
+
+.footer-wave {
+  margin-top: 0;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 40px 6vw;
+  display: flex;
+  justify-content: center;
+  background: #EAF7EE;
+}
+
+.about-box {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  background: #ffffff;
+  padding: 40px 60px;
+
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+.about-img {
+  width: 220px;
+  height: 220px; /* 🔥 same width & height = perfect circle */
+
+  border-radius: 50%; /* 🔥 makes it round */
+  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+  
+  background: url("home-about.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  flex-shrink: 0; /* 🔥 prevents resizing */
+}
+.about-text h2 {
+  color: #4E9E60;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-text p {
+  color: #6B7280;
+}
+
+/* ================= FOCUS ================= */
+
+.focus {
+  padding: 60px 6vw 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.focus-box {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(135deg, #EAF7EE, #DDF5E4);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.focus-box h2 {
+  color: #4E9E60;
+  font-family: 'Playfair Display', serif;
+}
+
+.sub {
+  margin-top: 5px;
+  color: #6B7280;
+}
+
+.focus-grid {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.focus-card {
+  flex: 1;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+/* 🌿 Balanced NGO colors */
+.f1 { background: linear-gradient(135deg, #6BB77B, #8FD19E); }
+.f2 { background: linear-gradient(135deg, #4E9E60, #6BB77B); }
+.f3 { background: linear-gradient(135deg, #8FD19E, #6BB77B); }
+
+.focus-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #6BB77B, #4E9E60);
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.cta p {
+  color: #EAF7EE;
+  margin-bottom: 20px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+  background: #F2C94C;
+  color: #2F2F2F;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e0b93f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .about-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .focus-grid {
+    flex-direction: column;
+  }
+}
+
+.focus-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.f1 { 
+  background: linear-gradient(135deg, #6BB77B, #8FD19E);
+}
+
+.f2 { 
+  background: linear-gradient(135deg, #5AA96B, #7FCF91);
+}
+
+.f3 { 
+  background: linear-gradient(135deg, #4E9E60, #6BB77B);
+}
+
+.focus-card p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.5;
+}

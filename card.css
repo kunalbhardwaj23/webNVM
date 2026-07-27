@@ -1,0 +1,142 @@
+
+:root {
+  --primary: #6bb77b;
+  --text-dark: #2f4f2f;
+  --text-light: #666;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5fbf6;
+}
+
+/* ================= SLIDER ================= */
+.carousel {
+  width: 95%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.4s ease;
+}
+
+/* ================= CARD ================= */
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* BACKGROUND IMAGE */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+/* CURVED CONTENT PANEL */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  background: #fff;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+/* ACCENT BAR */
+.card-info::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* TEXT */
+.card-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.card-info p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  overflow-y: auto;
+}
+
+.modal-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.modal-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .card { flex: 0 0 calc(50% - 20px); }
+  .modal-content { width: 90%; height: 70vh; }
+}
+
+@media (max-width: 600px) {
+  .card { flex: 0 0 100%; }
+  .modal-content { width: 95%; height: 75vh; }
+}

@@ -1,0 +1,461 @@
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* ✅ changed */
+}
+
+body {
+  overflow-x: hidden;
+  color: #2f2f2f; /* ✅ better readability */
+}
+
+/* ================= HERO ================= */
+
+.hero-left h1 {
+  font-family: 'Playfair Display', serif; /* ✅ */
+  color: #2e5d46; /* same color */
+}
+
+.hero-left p {
+  color: #555;
+}
+
+/* BUTTON TEXT */
+.btn-primary {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= VISION ================= */
+
+.vision h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+.vision p {
+  color: #555;
+}
+
+.vision-card h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.vision-card p {
+  color: #555;
+}
+
+/* ================= FOUNDERS ================= */
+
+.founders h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+.name {
+  font-family: 'Poppins', sans-serif;
+  color: #2f2f2f;
+}
+
+/* 🔥 QUOTE SPECIAL FONT */
+.quote {
+  font-family: 'Courgette', cursive; /* only font changed */
+  color: #2e5d46; /* same tone */
+}
+
+/* ================= COMMITTEE ================= */
+
+.committee h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+.member p {
+  font-family: 'Poppins', sans-serif;
+  color: #2f2f2f;
+}
+
+/* ================= PARTNERS ================= */
+
+.partners h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+/* 🌿 BACKGROUND */
+.bg-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(237,247,241,0.9), rgba(223,241,231,0.9)),
+    url(group\ background.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -1;
+}
+
+
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100vh;
+  padding: 0 6vw;
+
+  background:
+    linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.7)),
+    url("about.jpeg");
+
+  background-size: cover;
+
+  margin-bottom: 40px; /* 🔥 ADD THIS */
+}
+
+.hero-left h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  color: #2e5d46;
+}
+
+.hero-left p {
+  margin-top: 15px;
+  color: #555;
+  max-width: 500px;
+}
+
+.btn-primary {
+  background: #6bb77b;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* HERO IMAGE */
+.hero-right {
+  height: 420px;
+  border-radius: 25px;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1)),
+    url("about.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  animation: zoomInOut 12s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+/* ================= WAVES ================= */
+
+.wave svg {
+  width: 100%;
+  display: block;
+}
+
+.vision-wave {
+  margin-top: -40px;
+} */
+
+/* ================= VISION ================= */
+
+.vision {
+  padding: 100px 6vw;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(237,247,241,0.9), rgba(223,241,231,0.9)),
+    url("about.jpeg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.vision-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.vision h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  color: #2e5d46;
+}
+
+.vision p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* VISION CARD */
+.vision-card {
+  margin-top: 30px;
+  padding: 25px;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.vision-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= FOUNDERS ================= */
+
+.founders {
+  text-align: center;
+  padding: 100px 6vw 80px;
+}
+
+.founder-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.founder {
+  position: relative;
+  text-align: center;
+}
+
+.founder img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* NAME */
+.name {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* QUOTE */
+.quote {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  font-size: 14px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.founder:hover .quote {
+  opacity: 1;
+  bottom: -40px;
+}
+
+.founder:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= COMMITTEE ================= */
+
+.committee {
+  text-align: center;
+  padding: 100px 6vw 80px;
+}
+
+.committee h2 {
+  font-size: clamp(24px, 4vw, 34px);
+  color: #2e5d46;
+  position: relative;
+  display: inline-block;
+}
+
+.committee h2::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: #6bb77b;
+  position: absolute;
+  left: 20%;
+  bottom: -8px;
+  border-radius: 10px;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* MEMBER */
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.member:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= PARTNERS ================= */
+
+.partners {
+  text-align: center;
+  padding: 100px 6vw;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.logos img {
+  height: 50px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .committee-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .founder img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero-new {
+    height: 80vh;
+  }
+
+  .vision {
+    padding: 70px 20px;
+  }
+
+  .founders {
+    padding: 70px 20px;
+  }
+
+  .committee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .member img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .founder img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .hero-new {
+    height: 70vh;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logos img {
+    height: 40px;
+  }
+
+  .quote {
+    width: 150px;
+    font-size: 12px;
+  }
+}
+
+
+/* ================= HERO MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    grid-template-columns: 1fr; /* single column */
+    height: 90vh;
+    padding: 60px 20px;
+    text-align: center;
+
+    /* 🔥 MAKE IMAGE FULL BACKGROUND */
+    background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* ❌ HIDE RIGHT IMAGE */
+  .hero-right {
+    display: none;
+  }
+
+  /* TEXT COLOR FIX FOR DARK BG */
+  .hero-left h1 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .hero-left p {
+    color: #e5e7eb;
+    margin: 15px auto;
+  }
+
+  .btn-primary {
+    margin-top: 15px;
+  }
+}

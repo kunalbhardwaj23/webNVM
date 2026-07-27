@@ -1,0 +1,313 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: #2f2f2f;
+}
+
+/* 🌿 BACKGROUND */
+.bg-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(237,247,241,0.9), rgba(223,241,231,0.9)),
+    url("workHero.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -2;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 6vw;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  color: #2e5d46;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-left p {
+  margin-top: 10px;
+  color: #555;
+}
+
+.hero-left ul {
+  margin-top: 15px;
+}
+
+.hero-left li {
+  color: #4caf50;
+}
+
+/* HERO IMAGE */
+.hero-right {
+  height: 350px;
+  border-radius: 20px;
+  background:
+    linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1)),
+    url("workHero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 🌊 WAVES */
+.wave-top svg,
+.wave-bottom svg {
+  width: 100%;
+  display: block;
+}
+
+.wave-bottom {
+  margin-bottom: -5px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 30px;
+  padding: 60px 6vw;
+}
+
+.card {
+  flex: 1;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+.card p {
+  color: #555;
+}
+
+/* COLORS */
+.blue { color: #3b82f6; }
+.pink { color: #ec4899; }
+.green { color: #22c55e; }
+
+/* ================= IMPACT ================= */
+
+.impact {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.impact h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+/* MAIN CIRCLE */
+.impact-circle {
+  width: 220px;
+  height: 220px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6bb77b, #9dd8b4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  font-family: 'Playfair Display', serif;
+}
+
+/* GRID */
+.impact-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 35px auto 0;
+  max-width: 900px; /* keeps the 3 cards centered */
+}
+
+/* BOX BASE */
+.box {
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: 0.3s;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎨 COLORFUL BOXES */
+.b1 { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+.b2 { background: linear-gradient(135deg, #ec4899, #f472b6); }
+.b3 { background: linear-gradient(135deg, #22c55e, #4ade80); }
+.b4 { background: linear-gradient(135deg, #f97316, #fb923c); }
+
+.box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial {
+  text-align: center;
+  padding: 80px;
+  margin-top: -5px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  color: #555;
+}
+
+.testimonial h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2e5d46;
+}
+
+ /* ================= CTA ================= */ */
+
+.cta {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #6BB77B, #4E9E60);
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.cta p {
+  color: #EAF7EE;
+  margin-bottom: 20px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+  background: #F2C94C;
+  color: #2F2F2F;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e0b93f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .impact-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .impact-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ================= HERO MOBILE FIX ================= */
+
+@media(max-width:900px){
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+
+    /* 🔥 FULL BACKGROUND IMAGE */
+    background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* ❌ REMOVE SIDE IMAGE */
+  .hero-right {
+    display: none;
+  }
+
+  /* TEXT CENTER + WIDTH CONTROL */
+  .hero-left {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  /* TEXT COLOR FOR DARK BG */
+  .hero-left h1 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .hero-left p {
+    color: #e5e7eb;
+  }
+
+  .hero-left li {
+    color: #bbf7d0;
+  }
+}
+
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+    .impact-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .impact-boxes {
+        grid-template-columns: 1fr;
+    }
+}
